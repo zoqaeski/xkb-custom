@@ -48,4 +48,4 @@ xkb_symbols "vimkeys" {
   key <AC09> {	[  l,	L,  Right,  Right	]	};
 };
 
-// vim: ts=4 sts=4 et
+// vim: ts=4 sts=4 et ft=xkb
