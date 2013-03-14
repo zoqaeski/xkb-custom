@@ -13,39 +13,18 @@ xkb_symbols "alt_caps_mode_switch" {
     };
 };
 
-
-// I CANNOT GET THIS TO WORK!!!
-// Keypad math area with non-CS operators
-// Copyright © 2006 Nicolas Mailhot <nicolas.mailhot @ laposte.net>
-//
-// ┏━━━━━┱─────┬─────┬─────┐
-// ┃Num  ┃ ∕ ₁ │ . ₂ │ − ₃ │ ₁ <XF86_Ungrab>
-// ┃Lock⇭┃ / ÷ │ * × │ - − │ ₂ <XF86_ClearGrab>
-// ┡━━━━━╃─────┼─────┼─────┤ ₃ <XF86_Prev_VMode>
-//                   │ + ₄ │ ₄ <XF86_Next_VMode>
-//                   │     │
-//                   ┤     │ 1 None
-//                   │     │ 2 Level3 ⇮
-//                   │ + + │ 3 Shift+Level3 ⇧⇮
-//                   ╆━━━━━┪ 4 Ctrl+Alt
-partial keypad_keys
-xkb_symbols "keymath" {
-
-    key.type[Group1]="CTRL+ALT" ;
-
-    key <KPDV> { [   KP_Divide, 0x1002215, 0x10000F7, 0x10000F7,     XF86_Ungrab ] }; // / ∕ ÷     <XF86_Ungrab>
-    key <KPMU> { [ KP_Multiply, 0x10022C5, 0x10000D7, 0x10000D7,  XF86_ClearGrab ] }; // * ⋅ ×  <XF86_ClearGrab>
-    key <KPSU> { [ KP_Subtract, 0x1002212, 0x1002212, 0x1002212, XF86_Prev_VMode ] }; // - − − <XF86_Prev_VMode>
-    key <KPAD> { [      KP_Add, 0x100002B, 0x100002B, 0x100002B, XF86_Next_VMode ] }; // + + + <XF86_Next_VMode>
-
-};
-
 partial alphanumeric_keys modifier_keys
 xkb_symbols "vimkeys" {
-  key <AC06> {	[  h,	H,  Left,   Left	]	};
-  key <AC07> {	[  j,	J,  Down,   Down	]	};
-  key <AC08> {	[  k,	K,  Up,     Up		]	};
-  key <AC09> {	[  l,	L,  Right,  Right	]	};
+    key <AC06> {	[  h,	H,  Left,   Left	]	};
+    key <AC07> {	[  j,	J,  Down,   Down	]	};
+    key <AC08> {	[  k,	K,  Up,     Up		]	};
+    key <AC09> {	[  l,	L,  Right,  Right	]	};
+};
+
+xkb_symbols "switch_insert_print" {
+    key.type = "ONE_LEVEL" ;
+    key <INS>   {  [   Print ] };
+    key <PRSC>  {  [  Insert ] };
 };
 
 // vim: ts=4 sts=4 et ft=xkb

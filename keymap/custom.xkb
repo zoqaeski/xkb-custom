@@ -2,6 +2,6 @@ default xkb_keymap "default" {
   xkb_keycodes  { include "evdev+aliases(qwerty)"       };
   xkb_types     { include "complete"    };
   xkb_compat    { include "complete"    };
-  xkb_symbols   { include "pc+us+inet(evdev)+custom(alt_caps_mode_switch)+custom(vimkeys)+compose(ralt)+keypad(oss)+keypad(pointerkeys)"  };
+  xkb_symbols   { include "pc+us+inet(evdev)+custom(alt_caps_mode_switch)+custom(vimkeys)+custom(switch_insert_print)+compose(ralt)+keypad(oss)+keypad(pointerkeys)"  };
   xkb_geometry  { include "pc(pc104)"        };
 };
